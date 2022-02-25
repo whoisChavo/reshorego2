@@ -56,7 +56,7 @@ module.exports = {
 
         function embed(msg) {
             let embed = new MessageEmbed().setColor("WHITE").setAuthor({ name: `${interaction.member.displayName}`, iconURL: `${interaction.user.avatarURL({ dynamic: true })}` }).setFooter({ text: `Røwn 🖤 cяєsîwα`, iconURL: `${interaction.guild.iconURL({ dynamic: true })}` }).setTimestamp().setDescription(msg)
-            interaction.followUp({ embeds: [embed] }).sil(10)
+            interaction.followUp({ embeds: [embed] })
         }
 
         const user = interaction.options.getUser('kullanıcı');
@@ -67,10 +67,10 @@ module.exports = {
         if (!interaction.member.roles.cache.some(x => config.Role.RegisterStaff.includes(x.id))) return embed(`${client.emoji.No} **Bu komudu kullanmak için <@&${config.Role.RegisterStaff}> rolüne sahip olmanız lazım.**`);
 
         const member = interaction.guild.members.cache.get(user.id);
-        if (!member) return embed(`${client.emoji.No} **${user} kişisini sunucuda bulamadım!** `)
-        if (member.bot) return embed(`${client.emoji.No} **Herhangi bir \`botu\` kayıt edemezsin!**`)
-        if (!member.manageable) return embed(`${client.emoji.No} **${member} kullanıcısını yönetebilicek yetkide değilim!**`)
-        if (interaction.member.roles.highest.position <= member.roles.highest.position) return embed(`**${client.emoji.No} Kendinden üst yetkisi olan birini kayıt edemezsin!**`)
+        if (!member) return embed(`${client.emoji.No} **${user} kişisini sunucuda bulamadım!** `).sil(5)
+        if (member.bot) return embed(`${client.emoji.No} **Herhangi bir \`botu\` kayıt edemezsin!**`).sil(5)
+        if (!member.manageable) return embed(`${client.emoji.No} **${member} kullanıcısını yönetebilicek yetkide değilim!**`).sil(5)
+        if (interaction.member.roles.highest.position <= member.roles.highest.position) return embed(`**${client.emoji.No} Kendinden üst yetkisi olan birini kayıt edemezsin!**`).sil(5)
 
 
         let name_1 = isim.charAt(0).replace("i", "İ").toLocaleUpperCase() + isim.slice(1).toLocaleLowerCase();

@@ -1,0 +1,20 @@
+{
+  "name": "discord-v13-handler-main",
+  "version": "0.0.1",
+  "description": "<h1 align=\"center\">\r Best-Advance-Discord.js-v13-handler</h1><br/>",
+  "main": "cresiwa.js",
+  "scripts": {
+    "test": "node cresiwa.js"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "author": "cresiwa",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
+    "mongoose": "^5.13.14"
+  }
+}

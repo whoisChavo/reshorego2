@@ -84,13 +84,13 @@ module.exports = {
                 await CresiwaData.man(member, interaction.user)
                 await CresiwaData.setusername(member, name_2, `<@&${config.Role.ManRole}>`, `${config.Role.ManRole}`)
                 embed(`${client.emoji.Yes} **${member} adlı kullanıcı başarıyla <@&${config.Role.ManRole}> rolüyle kayıt edildi**`)
-                await kanal.send(`**${member} adlı kullanıcı başarıyla kayıt edildi.Hoşgeldin**`)
+                await kanal.send(`**${member} adlı kullanıcı başarıyla kayıt edildi.Hoşgeldin**`).sil(10)
             }
             if (cins == "kadın") {
                 await CresiwaData.woman(member, interaction.user)
                 await CresiwaData.setusername(member, name_2, `<@&${config.RoleWomanRole}>`, `${config.RoleWomanRole}`)
                 embed(`${client.emoji.Yes} **${member} adlı kullanıcı başarıyla <@&${config.Role.WomanRole}> rolüyle kayıt edildi**`)
-                await kanal.send(`**${member} adlı kullanıcı başarıyla kayıt edildi.Hoşgeldin**`)
+                await kanal.send(`**${member} adlı kullanıcı başarıyla kayıt edildi.Hoşgeldin**`).sil(10)
             }
 
 

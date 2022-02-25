@@ -38,6 +38,7 @@ module.exports = async member => {
     if (security === "şüpheli") {
         await member.setNickname("Şüpheli")
         await member.roles.add(config.Role.Suspicious);
+        await member.roles.remove(config.Role.Unregistered);
         channel.send({ embeds: [embed.setDescription(`${member} (${member.id}) az önce sunucuya katıldı, fakat hesabı \`${moment(member.user.createdAt).locale("tr").format("LLL")}\` tarihinde \`(${client.giris(member.user.createdAt)})\` açıldığı için <@&${config.Role.Suspicious}> rolü verildi`)] });
         schannel.send({ embeds: [embed.setDescription(`**${member} (${member.id}) az önce sunucuya katıldın, fakat \`${moment(member.user.createdAt).locale("tr").format("LLL")}\` tarihinde \`(${client.giris(member.user.createdAt)})\` açıldığı için <@&${config.Role.Suspicious}> rolü verildi.\nYetkililer en kısa sürede ilgilenecektir.**`)] })
     } else if (security === "güvenli"){

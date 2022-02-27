@@ -1,5 +1,5 @@
 {
-    "token": "OTM5ODU5OTIyNzE0MjU5NTA2.Yf--ww.4SAm07xwI-S7eyGHFvu3dwLuLAU",
+    "token": "OTM5ODU5OTIyNzE0Mjw.4SAm07xwI-S7eyGHFvu3dwLuLAU",
 
     "mongoURL": "mongodb://resh:ahmetbey1826@resh-shard-00-00.tyqmm.mongodb.net:27017,resh-shard-00-01.tyqmm.mongodb.net:27017,resh-shard-00-02.tyqmm.mongodb.net:27017/ReshCRWS?ssl=true&replicaSet=atlas-yw697p-shard-0&authSource=admin&retryWrites=true&w=majority",
 
